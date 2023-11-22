@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		89CEB9932B0C374300F3E262 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEB9922B0C374300F3E262 /* main.swift */; };
-		89CEB99A2B0C38D600F3E262 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CEB9992B0C38D600F3E262 /* Selection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		89CEB98F2B0C374300F3E262 /* RSPPrac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RSPPrac; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CEB9922B0C374300F3E262 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		89CEB9992B0C38D600F3E262 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				89CEB9922B0C374300F3E262 /* main.swift */,
-				89CEB9992B0C38D600F3E262 /* Selection.swift */,
 			);
 			path = RSPPrac;
 			sourceTree = "<group>";
@@ -123,7 +120,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89CEB99A2B0C38D600F3E262 /* Selection.swift in Sources */,
 				89CEB9932B0C374300F3E262 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,7 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WZFUFHJN8D;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -264,7 +260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WZFUFHJN8D;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
