@@ -55,16 +55,16 @@ enum MukJjiBBa: String {
 // 묵찌빠 게임 클래스
 class Game {
     private var turn: Bool = true // 사용자 턴
-    private var isRunning: Bool = true
+    private var OnGame: Bool = true
     
     func endGame() {
         print("<게임종료>")
-        isRunning.toggle()
+        OnGame.toggle()
     }
     
     // 가위바위보 게임을 플레이하는 메서드
     func playRockScissorsPaperGame() {
-        while isRunning {
+        while OnGame {
             print("가위(1), 바위(2), 보(3)! <종료 : 0> : ", terminator: "")
             if let input = readLine(),
                let userChoice = RockScissorsPaper(rawValue: input) {
@@ -128,15 +128,23 @@ class Game {
         print("컴퓨터 선택: \(comChoice.stringValue())")
         
         if comChoice == userChoice {
-            // 이겼을경우
-            print("🎉 \(turn ? "사용자" : "컴퓨터")의 승리!")
-            endGame()
-        } else {
-            // 졌을경우
-            turn.toggle()
-            print("\(turn ? "사용자" : "컴퓨터")의 턴입니다.")
-            playMukJjiBBaGame()
-        }
+                print("🎉 \(turn ? "사용자" : "컴퓨터")의 승리!")
+                endGame()
+            } else {
+                let userWinsGame = (comChoice == .jji && userChoice == .muk) ||
+                                   (comChoice == .muk && userChoice == .bba) ||
+                                   (comChoice == .bba && userChoice == .jji)
+                
+                if (turn && userWinsGame) || (!turn && !userWinsGame) {
+                    print("(묵찌빠 무승부) \(turn ? "사용자" : "컴퓨터")가 가위바위보를 이겼기 때문에")
+                } else {
+                    print("(묵찌빠 무승부) \(turn ? "사용자" : "컴퓨터")가 가위바위보를 졌기 때문에")
+                    turn.toggle()
+                }
+                
+                print("\(turn ? "사용자" : "컴퓨터")의 턴입니다.")
+                playMukJjiBBaGame()
+            }
     }
     
 }
@@ -144,6 +152,7 @@ class Game {
 // 묵찌빠 게임 시작
 let game = Game()
 game.playRockScissorsPaperGame()
+
 
 
 
